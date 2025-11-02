@@ -50,13 +50,9 @@ def my_mapper(data_item):
     # Process a single data item and return list of (key, value) pairs
     return [(key, value), ...]
 
-def my_reducer(key, values):
-    # Process all values for a given key and return result
-    return result
-
 # Use with the framework
-mr = SimpleMapReduce(num_mappers=2, num_reducers=2)
-results = mr.map_reduce(data, my_mapper, my_reducer)
+mr = SimpleMapReduce(num_mappers=2)
+results = mr.map_reduce(data, my_mapper)
 ```
 
 ## Components
@@ -70,16 +66,12 @@ The core class that orchestrates the MapReduce job:
 3. Groups results by key (shuffle phase)
 4. Applies the reducer function to each group
 
-### Built-in Jobs
+### Built-in Job
 
 1. **Word Count**: Counts occurrences of each word in text
-2. **Inverted Index**: Maps words to the documents they appear in
-3. **Natural Join**: Joins two tables on a common key
 
 ## Example Output
 
 Running `python example.py` will show:
 
 - Word Count results: each word and its occurrence count
-- Inverted Index results: each word and the files it appears in
-- Custom job results: sum of numbers by category
