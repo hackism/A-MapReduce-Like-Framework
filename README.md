@@ -30,17 +30,6 @@ python example.py
 
 You can run the MapReduce jobs from the command line.
 
-#### Running a full MapReduce job
-
-To run a full MapReduce job (e.g., word count), use the following command:
-
-```bash
-# Word count example
-python cli.py word_count --input sample_input.txt --mappers 2 --reducers 2
-```
-
-This will execute both the map and reduce steps, producing the final aggregated results.
-
 #### Running only the Map phase
 
 To run only the map phase of a job (e.g., word count mapper), use the `map_only` job type:
