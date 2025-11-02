@@ -2,6 +2,11 @@
 
 A simplified implementation of the MapReduce programming model in Python. This framework demonstrates the core concepts of MapReduce with minimal complexity.
 
+## NOTE:
+
+For the Requirments of this Project only **Map** functionality is implemented.
+**Reduce** will be implemented late for Final Evaluation.
+
 ## Features
 
 - Simple MapReduce execution model
@@ -40,20 +45,6 @@ python cli.py map_only --input sample_input.txt --mappers 2
 ```
 
 This will execute only the mapping step and output the intermediate key-value pairs.
-
-### Creating Custom Jobs
-
-You can easily define your own MapReduce jobs by implementing mapper and reducer functions:
-
-```python
-def my_mapper(data_item):
-    # Process a single data item and return list of (key, value) pairs
-    return [(key, value), ...]
-
-# Use with the framework
-mr = SimpleMapReduce(num_mappers=2)
-results = mr.map_reduce(data, my_mapper)
-```
 
 ## Components
 
