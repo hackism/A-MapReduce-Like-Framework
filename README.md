@@ -1,4 +1,4 @@
-# A MapReduce-like Framework
+# A MapReduce-like Framework (PDC Project)
 
 A simplified implementation of the MapReduce programming model in Python. This framework demonstrates the core concepts of MapReduce with minimal complexity.
 
